@@ -45,19 +45,19 @@ With the client is possible to perform two different actions:
   send them to server.
   The server return back a status code related to the state of operations.
   
-    ./horcrux -p port_value -a save -n numeber_of_chunks -f filename
+        ./horcrux -p port_value -a save -n numeber_of_chunks -f filename
 
   Example:
 
-    ./client/horcrux -p 1234 -a save -n 4 -f ./client/test_file.txt
+        ./client/horcrux -p 1234 -a save -n 4 -f ./client/test_file.txt
   
 - load a file
   In the load action the client request a file, specifing the identifier, and
   receive back the N chunks from the server. Once received all files, the
   client tries to joint the file back into a new file.
 
-    ./horcrux -p port_value -a save -uuid file_identifier -o out_filename
+        ./horcrux -p port_value -a save -uuid file_identifier -o out_filename
 
   Example:
 
-    ./client/horcrux -p 1234 -a load -uuid 340532f7-52f7-43bd-89df-539d98fd3d9e -o merge.txt
+        ./client/horcrux -p 1234 -a load -uuid 340532f7-52f7-43bd-89df-539d98fd3d9e -o merge.txt
